@@ -15,7 +15,7 @@
 kind create cluster --name my-kube-cluster --config config.yaml
 ```
 
-![Kind](kind.png)
+![Kind](kind.PNG)
 
 # 2.Verify kubernetes nodes on kind cluster
 
