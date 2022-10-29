@@ -15,7 +15,7 @@
 kind create cluster --name my-kube-cluster --config config.yaml
 ```
 
-![Kind](kind.PNG)
+![Kind](./photo/kind.png)
 
 # 2.Verify kubernetes nodes on kind cluster
 
@@ -26,16 +26,16 @@ kubectl get ns
 kubectl get nodes -o wide
 ```
 
-![header image](./nodes.png)
+![header image](./photo/nodes.png)
 
-![header image](./svc.png)
+![header image](./photo/svc.png)
 
-![header image](./namespace.png)
+![header image](./photo/namespace.png)
 
-![header image](./docker.png)
+![header image](./photo/docker.png)
 
-# 3.Create metallb.yaml file (TBC)
-# 4.Install metallb by Manifest (TBC)
+#### 3.Create metallb.yaml file (TBC)
+#### 4.Install metallb by Manifest (TBC)
 
 
 
@@ -46,4 +46,4 @@ kubectl get nodes -o wide
 kind delete cluster --name my-kube-cluster
 ```
 
-![header image](./deletecluster.png)
+![header image](./photo/deletecluster.png)
