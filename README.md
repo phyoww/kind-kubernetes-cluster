@@ -8,7 +8,30 @@
 # Step:
 ## 1.Configuring a KIND cluster (kind: Cluster)/Kubernetes and that the version of KIND's config we are using is v1alpha4 (apiVersion: kind.x-k8s.io/v1alpha4).
 
-[Uploading config.yaml…]()
+## config.yaml
+```bash
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+# One control plane node and three "workers".
+#
+# While these will not add more real compute capacity and
+# have limited isolation, this can be useful for testing
+# rolling updates etc.
+#
+# The API-server and other control plane components will be
+# on the control-plane node.
+#
+# You probably don't need this unless you are testing Kubernetes itself.
+nodes:
+- role: control-plane
+  image: kindest/node:v1.20.7@sha256:e645428988191fc824529fd0bb5c94244c12401cf5f5ea3bd875eb0a787f0fe9
+- role: worker
+  image: kindest/node:v1.20.7@sha256:e645428988191fc824529fd0bb5c94244c12401cf5f5ea3bd875eb0a787f0fe9
+- role: worker
+  image: kindest/node:v1.20.7@sha256:e645428988191fc824529fd0bb5c94244c12401cf5f5ea3bd875eb0a787f0fe9
+- role: worker
+  image: kindest/node:v1.20.7@sha256:e645428988191fc824529fd0bb5c94244c12401cf5f5ea3bd875eb0a787f0fe9
+```
 
 
 # Run the below command to create kubernetes cluster
